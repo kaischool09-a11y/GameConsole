@@ -1,4 +1,5 @@
-﻿using GameConsole.Interfaces;
+﻿using GameConsole.Base;
+using GameConsole.Interfaces;
 
 namespace GameConsole
 {
@@ -6,7 +7,7 @@ namespace GameConsole
     {
         static void Main(string[] args)
         {
-            List<IGamePlay> games = new List<IGamePlay>();
+           /* List<IGamePlay> games = new List<IGamePlay>();
             games.Add(new Games.TetrisGame());
             games.Add(new Games.FluffyBirdGame());
             games.Add(new Games.PacManGame());
@@ -17,7 +18,10 @@ namespace GameConsole
 				Console.Write($" Game:{game.Name}");
 				Console.WriteLine($"Score:{game.Score}");
             }
+           */
+           Screen mainScreen = new Screen("Home page");
+              mainScreen.Show();
 
-		}
+        }
     }
 }
