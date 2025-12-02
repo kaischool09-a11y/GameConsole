@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameConsole.Base
 {
-    internal class MenuItem
+    public class MenuItem
     {
         public string DisplayName { get; set; }
         public Screen screen {  get; set; }

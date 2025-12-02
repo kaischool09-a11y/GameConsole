@@ -15,7 +15,7 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
-            string text = "welcome to screen console";
+          Console.WriteLine ("welcome to screen console");
             centerText("press any key to continue");
             Console.ReadKey();
             Screen next = new MainMenu();

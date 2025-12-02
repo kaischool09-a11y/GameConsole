@@ -1,4 +1,5 @@
 ﻿using GameConsole.Base;
+using GameConsole.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,20 +8,23 @@ using System.Threading.Tasks;
 
 namespace GameConsole.Pages
 {
-    public class LoginScreen : Screen
+    internal class GameScreen:Screen
     {
-        public LoginScreen() : base("Login screen")
-        {
+        private IGamePlay game;
 
+        public GameScreen(IGamePlay game): base(game.Name) 
+        {
+            this.game = game;
         }
+
         public override void Show()
         {
             base.Show();
-            Console.WriteLine("login screen:");
-            centerText(" enter details");
+            centerText("press anything to continue");
             Console.ReadKey();
-            Screen next = new GameMenuScreen();
-            next.Show();
+            game.Play();
+                
         }
+        
     }
 }

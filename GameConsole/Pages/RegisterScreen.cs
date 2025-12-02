@@ -13,9 +13,9 @@ namespace GameConsole.Pages
         private string Password { get; set; }
         public RegisterScreen() : base("Register screen")
         {
+            
+            centerText("to register, Enter details");
             base.Show();
-            centerText("Enter details");
-
         }
     }
 }

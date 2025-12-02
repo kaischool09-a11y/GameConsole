@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GameConsole.Base
 {
-    internal class MenuScreen : Screen
+public class MenuScreen : Screen
     {
-        private List<MenuItem> Items;
+        private List<MenuItem> Items { get; set; }
         public MenuScreen(string title) : base(title)
         {
             Items = new List<MenuItem>();
@@ -20,9 +20,15 @@ namespace GameConsole.Base
                 Items.Add(item);
             }
         }
+
         public void Add(string displayName, Screen screen)
         {
-            Items.Add(new MenuItem(displayName, screen));
+            if (displayName != null && screen != null)
+            {
+                MenuItem item= new MenuItem(displayName,screen);
+                Items.Add(item);
+                
+            }
         }
         public override void Show()
         {
@@ -39,7 +45,7 @@ namespace GameConsole.Base
                 centerText($"{Items.Count + 1}-Exit");
                 centerText($"choose between 1-{Items.Count} ");
                 int.TryParse(Console.ReadLine(), out choose);
-                if (choose > 0 && choose <= Items.Count)
+                if (choose >= 0 && choose <= Items.Count)
                 {
                     exit = true;
                 }
@@ -48,6 +54,7 @@ namespace GameConsole.Base
             if (choose <= Items.Count)
             {
                 Items[choose - 1].screen.Show();
+
 
             }
             Console.ReadKey();

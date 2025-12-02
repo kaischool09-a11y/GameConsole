@@ -16,6 +16,7 @@ namespace GameConsole.Base
         public virtual void Show (){
 
             Console.Clear();
+            centerText(Title);
             /* int spacing = (Console.WindowWidth - Title.Length) / 2;
             Console.WriteLine(new string(' ', spacing));
             Console.WriteLine($"\t\t\t {Title}");
@@ -24,7 +25,7 @@ namespace GameConsole.Base
         public void centerText(string text) { 
             
             
-            Console.SetCursorPosition(Console.WindowTop + Console.WindowWidth/2,Console.WindowTop);
+            Console.SetCursorPosition(Console.WindowTop + Console.WindowWidth/2,Console.CursorTop);
             Console.WriteLine(text);
         
         
