@@ -7,20 +7,17 @@ using System.Threading.Tasks;
 
 namespace GameConsole.Pages
 {
-    internal class WelcomeScreen: Screen
+    internal class LoginScreen : Screen
     {
-        public WelcomeScreen(): base("Welcome") {
-        
+        public LoginScreen() : base("Login screen")
+        {
+
         }
         public override void Show()
         {
             base.Show();
-            string text = "welcome to screen console";
-            centerText("press any key to continue");
+            centerText("enter details");
             Console.ReadKey();
-            Screen next = new MainMenu();
-            next.Show();
-
         }
     }
 }

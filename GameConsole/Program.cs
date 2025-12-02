@@ -1,5 +1,6 @@
 ﻿using GameConsole.Base;
 using GameConsole.Interfaces;
+using GameConsole.Pages;
 
 namespace GameConsole
 {
@@ -21,7 +22,8 @@ namespace GameConsole
            */
            Screen mainScreen = new Screen("Home page");
               mainScreen.Show();
-
+            Screen welcome = new WelcomeScreen();
+            welcome.Show();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameConsole.Base
 {
-    internal class Screen
+    public class Screen
     {
         public string Title { get; set; }
         public Screen( string title) 
@@ -16,9 +16,18 @@ namespace GameConsole.Base
         public virtual void Show (){
 
             Console.Clear();
-            int spacing = (Console.WindowWidth - Title.Length) / 2;
+            /* int spacing = (Console.WindowWidth - Title.Length) / 2;
             Console.WriteLine(new string(' ', spacing));
             Console.WriteLine($"\t\t\t {Title}");
+            */
+        }
+        public void centerText(string text) { 
+            
+            
+            Console.SetCursorPosition(Console.WindowTop + Console.WindowWidth/2,Console.WindowTop);
+            Console.WriteLine(text);
+        
+        
         }
 
     }
