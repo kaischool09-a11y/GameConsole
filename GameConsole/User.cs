@@ -10,13 +10,14 @@ namespace GameConsole
     internal class User
     {
         public string Name { get; set; }
-        public string Username { get; set; }
-        public int  Password { get; set; }
+        // public string Username { get; set; }
+        public string  Password { get; set; }
+        public string UserName { get; internal set; }
 
-        public User(string name, string username, int password)
+        public User(string name, string username, string password)
         {
             Name = name;
-            Username = username;
+            UserName = username;
             Password = password;
         }
     }

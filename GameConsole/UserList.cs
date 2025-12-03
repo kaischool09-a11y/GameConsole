@@ -20,15 +20,6 @@ namespace GameConsole
                 users.Add(user);
             }
         }
-        public User login(string name, int password) {
-            foreach (User user in users) {
-                if (user.Username == name && user.Password==password)
-                {
-                    return user;
-                }
-           
-            }
-            return null;
-        }
+        
     }
 }
