@@ -10,11 +10,12 @@ namespace GameConsole.Models
     {
         public int Score { get; set; }
         public string gameName { get; set; }
-
-        public HighScore(int score, string gameName )
+        private DateTime dates;
+        public HighScore(int score, string gameName, DateTime date )
         {
             Score = score;
             this.gameName = gameName;
+            this.dates = date;
         }
     }
 }
