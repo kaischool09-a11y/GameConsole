@@ -33,7 +33,7 @@ namespace GameConsole.Data
         public static void Update(User u)
         {
             foreach (User user in users)
-            {
+            { 
                 if (user.UserName == u.UserName)
                 {
                     user.Password = u.Password;
