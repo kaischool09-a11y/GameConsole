@@ -10,6 +10,7 @@ namespace GameConsole
 {
     internal class ConsoleGame
     {
+        public static User user;
         private Screen mainPage;
         public ConsoleGame()
         {

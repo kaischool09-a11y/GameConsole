@@ -23,6 +23,12 @@ namespace GameConsole
             // Screen mainScreen = new Screen("Home page");
             //  mainScreen.Show();
             Screen s = new Base.Screen("home page");
+
+            List<User> users = new List<User>();
+            User u1 = new User("john", "john123", "pass123");
+            users.Add(u1);
+            User u2 = new User("alice", "alice2", "word456");
+            users.Add(u2);
             //s.Show();
             ConsoleGame game = new ConsoleGame();
             game.startApp();
