@@ -42,7 +42,7 @@ namespace GameConsole.Data
             //    }
 
             //}
-            if (user != null)
+            if (user != null)   
             {
                 return user; // Username already exists
             }
