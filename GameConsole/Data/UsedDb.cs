@@ -30,7 +30,7 @@ namespace GameConsole.Data
             users.Add(newUser);
             return newUser;
         }
-        public User login(string name, string password)
+        public static User login(string name, string password)
         {
             User user = users.FirstOrDefault(u => u.UserName == name);
 

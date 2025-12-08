@@ -16,6 +16,10 @@ namespace GameConsole.Pages
             Add("tedris", new GameScreen(new TetrisGame()));
         
         }
+        public override void Show()
+        {
+            base.Show();
+        }
 
     }
 }
