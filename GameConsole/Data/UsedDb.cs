@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace GameConsole.Data
 {
+
+    //Fake DB
     internal class UsedDb
     {
-        private static List<User> users=new List<User>();
+        private static List<User> users = new List<User>()
+        {
+            new User("Kai", "k", "1234"),
+            new User("Tal", "t", "5678")
+        };
 
                 public static User RegisterUser(string name, string uName, string password)
         {
@@ -27,6 +33,7 @@ namespace GameConsole.Data
                 return null; // Username already exists
             }
             User newUser = new User(name, uName, password);
+            //UserList userList = new UserList(user);
             users.Add(newUser);
             return newUser;
         }

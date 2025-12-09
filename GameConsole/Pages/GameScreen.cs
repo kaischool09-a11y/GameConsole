@@ -1,5 +1,6 @@
 ﻿using GameConsole.Base;
 using GameConsole.Interfaces;
+using GameConsole.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +24,18 @@ namespace GameConsole.Pages
             centerText("press anything to continue");
             Console.ReadKey();
             game.Play();
-                
+            HighScore score = new HighScore(game.Name, game.Score);
+            
+            if (ConsoleGame.user.MaxScore!=null&& score.Score > ConsoleGame.user.MaxScore.score )
+            {
+                ConsoleGame.user.MaxScore = score;
+            }
+            else if (ConsoleGame.user.MaxScore == null)
+            {
+                ConsoleGame.user.MaxScore = score;
+            }
+            ConsoleGame.user.Scores.Add(score);
         }
-        
+
     }
 }

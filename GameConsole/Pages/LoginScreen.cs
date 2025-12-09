@@ -35,15 +35,19 @@ namespace GameConsole.Pages
 
                 if (user == null)
                 {
-                    Console.WriteLine(" Registration Failed. Username already exists or invalid input.");
+                    Console.WriteLine(" login Failed.  invalid input.");
                     Console.WriteLine("Please try again");
                 }
             }
-            Console.WriteLine("Registration Completed");
-            Console.ReadKey();
+            if (user != null)
+            {
+                Console.WriteLine("Login Completed");
+                ConsoleGame.user = user;
+                Console.ReadKey();
 
-            GameMenuScreen n = new GameMenuScreen();
-            n.Show();
+                ProfileScreen n = new ProfileScreen();
+                n.Show();
+            }
         }
         }
     }

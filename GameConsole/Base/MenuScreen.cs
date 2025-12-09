@@ -54,6 +54,7 @@ public class MenuScreen : Screen
             if (choose <= Items.Count)
             {
                 Items[choose - 1].screen.Show();
+                Show();
 
 
             }

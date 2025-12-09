@@ -18,8 +18,7 @@ namespace GameConsole.Pages
         public RegisterScreen() : base("Register screen")
         {
             
-            centerText("to register, Enter details");
-            base.Show();
+            
         }
         public override void Show()
         {
