@@ -13,6 +13,7 @@ namespace GameConsole.Pages
         {
             Add(new MenuItem("register", new RegisterScreen()));
             Add(new MenuItem("Login", new LoginScreen()));
+            Add(new MenuItem("history screen", new HistoryScreen()));
           
            /* Screen next = new LoginScreen();
             next.Show();

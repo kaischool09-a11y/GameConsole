@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameConsole
+namespace GameConsole.Models
 {
     
     internal class User
@@ -13,8 +13,8 @@ namespace GameConsole
         // public string Username { get; set; }
         public string  Password { get; set; }
         public string UserName { get; internal set; }
-        public Models.HighScore MaxScore { get; set; }
-        public List<Models.HighScore> Scores;
+        public HighScore MaxScore { get; set; }
+        public List<HighScore> Scores;
 
 
 
@@ -24,7 +24,7 @@ namespace GameConsole
             Name = name;
             UserName = username;
             Password = password;
-            Scores = new List<Models.HighScore>();
+            Scores = new List<HighScore>();
         }
     }
 }

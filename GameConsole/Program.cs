@@ -1,5 +1,6 @@
 ﻿using GameConsole.Base;
 using GameConsole.Interfaces;
+using GameConsole.Models;
 using GameConsole.Pages;
 
 namespace GameConsole

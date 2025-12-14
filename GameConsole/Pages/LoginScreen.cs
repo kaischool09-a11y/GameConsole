@@ -1,5 +1,6 @@
 ﻿using GameConsole.Base;
 using GameConsole.Data;
+using GameConsole.Models;
 using GameConsole.Pages;
 using System;
 using System.Collections.Generic;

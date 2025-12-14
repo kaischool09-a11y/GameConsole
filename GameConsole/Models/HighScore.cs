@@ -10,7 +10,7 @@ namespace GameConsole.Models
     {
         public int Score { get; set; }
         public string gameName { get; set; }
-        private DateTime dates;
+        public DateTime dates { get; set; }
         private string name;
         internal int score;
 
