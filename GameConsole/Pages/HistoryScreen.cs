@@ -83,7 +83,7 @@ namespace GameConsole.Pages
 
             }
 
-        }
+        }  
         public static void orderByName()
         {
             List<HighScore> scores = ConsoleGame.user.Scores.OrderBy(s => s.gameName).ToList();
