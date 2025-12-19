@@ -10,12 +10,12 @@ namespace GameConsole.Pages
     internal class WelcomeScreen: Screen
     {
         public WelcomeScreen(): base("Welcome") {
-        
         }
         public override void Show()
         {
             base.Show();
-          Console.WriteLine ("welcome to screen console");
+     
+            Console.WriteLine ("welcome to screen console");
             centerText("press any key to continue");
             Console.ReadKey();
             Screen next = new MainMenu();

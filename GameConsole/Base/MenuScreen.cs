@@ -33,6 +33,7 @@ public class MenuScreen : Screen
         public override void Show()
         {
             base.Show();
+            Console.BackgroundColor = ConsoleColor.Blue;
             centerText("choose screen");
             bool exit = false;
             int choose = 0;
