@@ -11,6 +11,6 @@ internal class ProfileScreen : MenuScreen
         Add("Update UserName and Password Details", new UpdateScreen());
         Add("Update Password Only", new UpdateUserPassword());
         Add("Update Name only", new UpdateUserName());
-        Add("Back to Main Menu", new MainMenu());
+      
     }
 }

@@ -38,6 +38,8 @@ namespace GameConsole.Pages
                 {
                     Console.WriteLine(" login Failed.  invalid input.");
                     Console.WriteLine("Please try again");
+                   
+                
                 }
             }
             if (user != null)
@@ -46,7 +48,7 @@ namespace GameConsole.Pages
                 ConsoleGame.user = user;
                 Console.ReadKey();
 
-                ProfileScreen n = new ProfileScreen();
+               ActionMenu n = new ActionMenu();
                 n.Show();
             }
         }

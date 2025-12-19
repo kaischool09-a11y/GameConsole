@@ -30,6 +30,8 @@ namespace GameConsole
             users.Add(u1);
             User u2 = new User("alice", "alice2", "word456");
             users.Add(u2);
+            User u3 = new User("bob", "bobby", "1234");
+            users.Add(u3);
             //s.Show();
             ConsoleGame game = new ConsoleGame();
             game.startApp();
